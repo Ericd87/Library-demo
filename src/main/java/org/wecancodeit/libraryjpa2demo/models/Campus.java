@@ -18,7 +18,6 @@ public class Campus {
     private Collection<Book> books;
 
     public Long getId() {
-
         return id;
     }
 
@@ -27,7 +26,6 @@ public class Campus {
     }
 
     public Collection<Book> getBooks() {
-
         return books;
     }
     //default no args constructor required for jpa
@@ -39,7 +37,6 @@ public class Campus {
         this.location = location;
 
     }
-
 
     @Override
     public boolean equals(Object o) {

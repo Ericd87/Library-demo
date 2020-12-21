@@ -21,11 +21,8 @@ public class Book {
     @ManyToMany
     private Collection<Author> authors;
 
-    public Book(String title, String description, Campus testCampus, Author testAuthor1, Author testAuthor2) {
-    }
 
     public Long getId() {
-
         return id;
     }
 
@@ -49,7 +46,7 @@ public class Book {
 
     }
 
-    public Book(String title, String description, Campus campus, Author authors) {
+    public Book(String title, String description, Campus campus, Author...authors) {
         this.title=title;
         this.description=description;
         this.campus=campus;

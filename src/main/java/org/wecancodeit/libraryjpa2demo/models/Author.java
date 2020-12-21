@@ -22,12 +22,19 @@ public class Author {
         return id;
     }
 
-    public Collection<Book> getBooks() {
-
+    public Collection<Book> getBooks(){
         return books;
     }
 
-    public Author() {
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public Author(){
 
     }
 
@@ -46,7 +53,8 @@ public class Author {
     }
 
     @Override
-    public int hashCode() { return Objects.hash(id, firstName, lastName, books);
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, books);
     }
 }
 

@@ -36,7 +36,7 @@ public class JPAWritingTest {
         Campus testCampus2 = new Campus("Test Location2");
         Author testAuthor1 = new Author("Test firstName", "Test lastName");
         Book testBook1 = new Book("Title", "Description", testCampus, testAuthor1);
-        Book testBook2 = new Book("Title", "Description", testCampus2,testAuthor1);
+        Book testBook2 = new Book( "Title", "Description", testCampus2,testAuthor1);
 
         campusRepo.save(testCampus);
         campusRepo.save(testCampus2);
@@ -50,7 +50,7 @@ public class JPAWritingTest {
 
         Optional<Campus> retrievedCampusOpt = campusRepo.findById(testCampus.getId());
         Campus retrievedCampus = retrievedCampusOpt.get();
-        assertThat(retrievedCampus.getBooks()).contains(testBook1);
+        assertThat(retrievedCampus.getBooks()).contains(testBook1, testBook2);
 
     }
 
